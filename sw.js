@@ -4,11 +4,11 @@ var cacheStorageKey = 'hotel-5';
 
 var cacheList = [
   '/',
-  "index.html",
-  "main.css",
-  "e.png",
-  "hotel-1.png",
-  "hotel-2.png"
+  "./index.html",
+  "./main.css",
+  "./e.png",
+  "./hotel-1.png",
+  "./hotel-2.png"
 ]
 
 self.addEventListener('install', function(e) {

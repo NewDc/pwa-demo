@@ -2,9 +2,9 @@
 <head>
   <title>酒店PWA</title>
   <meta name="viewport" content="width=device-width, user-scalable=no" />
-  <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <link rel="icon" href="/e.png" type="image/png" />
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="stylesheet" type="text/css" href="./main.css">
+  <link rel="icon" href="./e.png" type="image/png" />
 </head>
 
 <body>
@@ -15,7 +15,7 @@
   </div>
   <div class="hotel-wrap">
     <div class="hotel-img">
-      <img src="hotel-1.png" alt="">      
+      <img src="./hotel-1.png" alt="">      
     </div>
     <div class="hotel-des">
       <p>和颐酒店（中关村店）</p>
@@ -25,7 +25,7 @@
   </div>
   <div class="hotel-wrap">
     <div class="hotel-img">
-      <img src="hotel-2.png" alt="">
+      <img src="./hotel-2.png" alt="">
     </div>
     <div class="hotel-des">
       <p>中关村国际会议中心</p>
@@ -35,7 +35,7 @@
   </div>
   <div class="hotel-wrap">
     <div class="hotel-img">
-      <img src="hotel-1.png" alt="">
+      <img src="./hotel-1.png" alt="">
     </div>
     <div class="hotel-des">
       <p>和颐酒店（中关村店）</p>
@@ -45,7 +45,7 @@
   </div>
   <div class="hotel-wrap">
     <div class="hotel-img">
-      <img src="hotel-2.png" alt="">
+      <img src="./hotel-2.png" alt="">
     </div>
     <div class="hotel-des">
       <p>中关村国际会议中心</p>
@@ -55,7 +55,7 @@
   </div>
   <script type="text/javascript">
     if (navigator.serviceWorker != null) {
-      navigator.serviceWorker.register('sw.js')
+      navigator.serviceWorker.register('./sw.js')
       .then(function(registration) {
         console.log('Registered events at scope: ', registration.scope);
       });
