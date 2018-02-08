@@ -1,6 +1,6 @@
 
 console.log('Script loaded!')
-var cacheStorageKey = 'hotel-5';
+var cacheStorageKey = 'hotel-7';
 
 var cacheList = [
   '/',
@@ -28,17 +28,16 @@ self.addEventListener('activate', function(e) {
   console.log('Activate event')
   e.waitUntil(
     Promise.all(
-      caches.keys().then(cacheNames => {
-        return cacheNames.map(name => {
-          if (name !== cacheStorageKey) {
-            return caches.delete(name)
-          }
-        })
-      })
-    ).then(() => {
-      console.log('Clients claims.')
-      return self.clients.claim()
-    })
+
+      cacheNames.filter(name => {
+
+        return name !== cacheStorageKey
+
+      }).map(name => {
+
+        return caches.delete(name)
+
+      })).then(() => self.clients.claim())
   )
 })
 
