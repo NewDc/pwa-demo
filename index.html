@@ -1,0 +1,72 @@
+
+<head>
+  <title>酒店PWA</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="icon" href="/e.png" type="image/png" />
+</head>
+
+<body>
+  <div class="title">糯米酒店</div>
+  <div class="network-message">
+    Network:
+    <span id="network-status" class="">在线</span>
+  </div>
+  <div class="hotel-wrap">
+    <div class="hotel-img">
+      <img src="hotel-1.png" alt="">      
+    </div>
+    <div class="hotel-des">
+      <p>和颐酒店（中关村店）</p>
+      <p>地址：软件园路5号</p>
+      <p>类型：高档型酒店</p>
+    </div>
+  </div>
+  <div class="hotel-wrap">
+    <div class="hotel-img">
+      <img src="hotel-2.png" alt="">
+    </div>
+    <div class="hotel-des">
+      <p>中关村国际会议中心</p>
+      <p>地址：软件园路5号</p>
+      <p>类型：高档型酒店</p>
+    </div>
+  </div>
+  <div class="hotel-wrap">
+    <div class="hotel-img">
+      <img src="hotel-1.png" alt="">
+    </div>
+    <div class="hotel-des">
+      <p>和颐酒店（中关村店）</p>
+      <p>地址：软件园路5号</p>
+      <p>类型：高档型酒店</p>
+    </div>
+  </div>
+  <div class="hotel-wrap">
+    <div class="hotel-img">
+      <img src="hotel-2.png" alt="">
+    </div>
+    <div class="hotel-des">
+      <p>中关村国际会议中心</p>
+      <p>地址：软件园路5号</p>
+      <p>类型：高档型酒店</p>
+    </div>
+  </div>
+  <script type="text/javascript">
+    if (navigator.serviceWorker != null) {
+      navigator.serviceWorker.register('sw.js')
+      .then(function(registration) {
+        console.log('Registered events at scope: ', registration.scope);
+      });
+    }
+
+    fetch('./data.json')
+
+    var statusEl = document.querySelector('#network-status')
+    if (!navigator.onLine) {
+      statusEl.innerText = '离线';
+      statusEl.classList = ['is-offline'];
+    }
+  </script>
+</body>
