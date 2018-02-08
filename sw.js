@@ -1,6 +1,6 @@
 
 console.log('Script loaded!')
-var cacheStorageKey = 'hotel-5';
+var cacheStorageKey = 'hotel-6';
 
 var cacheList = [
   '/',
